@@ -93,8 +93,8 @@ const About = () => {
                   </div>
                   <Paragraph style={{ color: '#cccccc', margin: 0 }}>
                     Computer Science Engineering<br />
-                    Currently pursuing my degree with focus on software development
-                  </Paragraph>
+                    Successfully completed my degree with a specialization in Software Development.
+                    </Paragraph>
                 </Card>
               </Col>
 
