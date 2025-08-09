@@ -18,6 +18,13 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/927621bcs086raghul",
       demo: "#"
+    },
+    {
+      title: "NetReflect",
+      description: "A Netflix-inspired streaming platform interface built using React, Vite.js, and Ant Design, featuring responsive layouts, styled UI components, and intuitive navigation for browsing shows and movies.",
+      technologies: ["React", "Vite.js", "Ant Design", "JavaScript", "CSS"],
+      github: "https://github.com/927621bcs086raghul/netreflect",
+      demo: "https://netreflect-cc54j7naw-raghulajay814-5015s-projects.vercel.app"
     }
   ];
 

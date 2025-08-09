@@ -1,6 +1,6 @@
 import { Form, Input, Button, Card, Row, Col, Typography, Space } from "antd";
 import { MailOutlined, PhoneOutlined, EnvironmentOutlined, GithubOutlined } from "@ant-design/icons";
-
+import emailjs from 'emailjs-com';
 const { Title, Paragraph } = Typography;
 const { TextArea } = Input;
 
@@ -8,9 +8,29 @@ const Contact = () => {
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
-    console.log('Form values:', values);
-    alert('Thank you for your message! I will get back to you soon.');
-    form.resetFields();
+
+  emailjs.send(
+    'raghul_1310',
+  'template_pwpmydn',
+  {
+    name: values.name,
+    email: values.email,
+    reply_to: values.email, // important for "Reply" to go to sender
+    subject: `New message from ${values.name} (${values.email})`, // more informative subject
+    message: values.message
+  },
+  'CNTyKDsdA2pJPDd8z'
+  ).then(
+    (result) => {
+      alert('Message sent successfully!');
+      form.resetFields();
+    },
+    (error) => {
+      alert('Failed to send message. Please try again.');
+      console.error(error);
+    }
+  );
+
   };
 
   const contactInfo = [
