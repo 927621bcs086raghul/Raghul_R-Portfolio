@@ -14,7 +14,7 @@ const Skills = () => {
     {
       icon: GlobalOutlined,
       title: "Frontend",
-      skills: ["HTML", "CSS", "ReactJS"],
+      skills: ["HTML", "CSS+ANTDESIGN", "ReactJS"],
       color: "#52c41a"
     },
     {
@@ -28,6 +28,12 @@ const Skills = () => {
       title: "Learning",
       skills: ["Node.js", "MongoDB", "TypeScript"],
       color: "#fa8c16"
+    },
+    {
+      icon: GlobalOutlined,
+      title: "React",
+      skills: ["Redux Toolkit", "Thunk", "Saga"],
+      color: "#47b9b9ff"
     }
   ];
 
@@ -79,7 +85,13 @@ const Skills = () => {
                 hoverable
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = `0 15px 35px rgba(${category.color === '#1890ff' ? '24, 144, 255' : category.color === '#52c41a' ? '82, 196, 26' : category.color === '#722ed1' ? '114, 46, 209' : '250, 140, 22'}, 0.3)`;
+                  let boxShadowColor;
+                  if (category.color === '#1890ff') boxShadowColor = '24, 144, 255';
+                  else if (category.color === '#52c41a') boxShadowColor = '82, 196, 26';
+                  else if (category.color === '#722ed1') boxShadowColor = '114, 46, 209';
+                  else if (category.color === '#47b9b9ff' || category.title === 'React') boxShadowColor = '71, 185, 185';
+                  else boxShadowColor = '250, 140, 22';
+                  e.currentTarget.style.boxShadow = `0 15px 35px rgba(${boxShadowColor}, 0.3)`;
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
@@ -94,7 +106,7 @@ const Skills = () => {
                   <div style={{
                     padding: '12px',
                     borderRadius: '50%',
-                    background: `rgba(${category.color === '#1890ff' ? '24, 144, 255' : category.color === '#52c41a' ? '82, 196, 26' : category.color === '#722ed1' ? '114, 46, 209' : '250, 140, 22'}, 0.1)`
+                    background: `rgba(${category.color === '#1890ff' ? '24, 144, 255' : category.color === '#52c41a' ? '82, 196, 26' : category.color === '#722ed1' ? '114, 46, 209' : category.color === '#47b9b9ff' || category.title === 'React' ? '71, 185, 185' : '250, 140, 22'}, 0.1)`
                   }}>
                     <category.icon style={{ fontSize: '32px', color: category.color }} />
                   </div>

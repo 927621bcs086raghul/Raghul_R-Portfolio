@@ -24,7 +24,7 @@ const Hero = () => {
               </Title>
 
               <Paragraph className="hero-subtitle">
-                React Developer & UI/UX Enthusiast
+                React Developer 
               </Paragraph>
 
               <div className="hero-location">
@@ -42,15 +42,6 @@ const Hero = () => {
                   Get In Touch
                 </Button>
 
-                <Button
-                  type="primary"
-                  size="large"
-                  className="hero-button-primary"
-                  href="/resume.pdf"
-                  download="Raghul_R_Resume.pdf"
-                >
-                  Get Resume
-                </Button>
 
                 <Button
                   size="large"

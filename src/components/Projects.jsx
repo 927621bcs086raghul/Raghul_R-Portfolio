@@ -101,25 +101,7 @@ const Projects = () => {
                   ))}
                 </div>
                 
-                <div style={{ display: 'flex', gap: '12px' }}>
-                  <Button
-                    type="primary"
-                    icon={<GithubOutlined />}
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Code
-                  </Button>
-                  <Button
-                    icon={<LinkOutlined />}
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo
-                  </Button>
-                </div>
+                {/* Removed View Code and Live Demo buttons as requested */}
               </Card>
             </Col>
           ))}

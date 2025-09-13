@@ -28,7 +28,7 @@ const Footer = () => {
             RAGHUL.R
           </div>
           <Text style={{ color: '#999999', fontSize: '16px' }}>
-            React Developer & UI/UX Enthusiast
+            React Developer
           </Text>
         </div>
 
